@@ -8,40 +8,23 @@ import "./App.css";
 
 function App() {
   const [geometry, setGeometry] = useState("torus");
+  const btns = ["cube", "sphere", "torus", "torusKnot"];
   return (
     <>
-      <button
-        type="button"
-        onClick={() => {
-          setGeometry("cube");
-        }}
-      >
-        Cube
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          setGeometry("sphere");
-        }}
-      >
-        Sphere
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          setGeometry("torus");
-        }}
-      >
-        Torus
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          setGeometry("torusKnot");
-        }}
-      >
-        Torus Knot
-      </button>
+      <div>
+        {btns.map((btn, index) => (
+          <button
+            key={index}
+            type="button"
+            onClick={() => {
+              setGeometry(btn);
+            }}
+          >
+            {btn}
+          </button>
+        ))}
+      </div>
+
       <Canvas>
         <directionalLight position={[0, 0, 2]} intensity={0.9} />
         <ambientLight intensity={0.7} />
