@@ -8,7 +8,7 @@ function App() {
     useFrame((state, delta) => {
       ref.current.rotation.y += delta;
       ref.current.rotation.x += delta;
-      ref.current.position.z += Math.sin(state.clock.elapsedTime) * 0.03;
+      ref.current.position.z += Math.sin(state.clock.elapsedTime) * 0.01;
     });
     return (
       <mesh position={position} ref={ref}>
