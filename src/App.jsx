@@ -5,6 +5,7 @@ import Sphere from "./assets/components/Sphere";
 import Torus from "./assets/components/Torus";
 import TorusKnot from "./assets/components/TorusKnot";
 import "./App.css";
+import { OrbitControls } from "@react-three/drei";
 
 function App() {
   const [geometry, setGeometry] = useState("torus");
@@ -49,6 +50,7 @@ function App() {
             size={[1, 0.4, 1000, 50]}
           />
         )}
+        <OrbitControls enableZoom={false} />
       </Canvas>
     </>
   );
