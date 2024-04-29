@@ -21,6 +21,11 @@ button {
   border-radius: 10px;
   border: 1px solid rgb(89, 89, 94);
   background: rgb(89, 89, 94);
+  text-transform: capitalize;
   color: #fff;
   cursor: pointer;
+}
+
+body {
+  background: rgba(128, 128, 128, 0.582);
 }
